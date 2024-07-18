@@ -63,7 +63,7 @@ func loadEnvVariables() {
 		}
 
 		env = strings.ReplaceAll(env, "\"", "")
-		if k == "CCUBE_CAL_PORT" || k == "VAULT_API_TIMEOUT" {
+		if k == "API_PORT" || k == "DB_PORT" {
 			port, err := strconv.Atoi(env)
 			if err == nil {
 				envVariables[k] = port
